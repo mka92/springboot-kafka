@@ -11,10 +11,11 @@ public class KafkaConsumer {
 
     private static final String CONSUMER_GROUP_ID = "myGroup";
 
-    @KafkaListener(topics = KafkaTopic.KAFKA_TOPIC,
+    @KafkaListener(topics = KafkaTopic.KAFKA_TOPIC_STRING,
             groupId = CONSUMER_GROUP_ID)
     public void consume(String message) {
-        log.info("Message: \"{}\" from topic: {} for groupId: {}", message, KafkaTopic.KAFKA_TOPIC, CONSUMER_GROUP_ID);
+        log.info("Message: \"{}\" from topic: {} for groupId: {}",
+                message, KafkaTopic.KAFKA_TOPIC_STRING, CONSUMER_GROUP_ID);
     }
 
 }
