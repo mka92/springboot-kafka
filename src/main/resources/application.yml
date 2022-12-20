@@ -15,3 +15,9 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 server:
   port: 8080
+
+thread-pool-configuration:
+  default-thread-pool:
+    core-pool-size: 8
+    max-pool-size: 8
+    thread-name-prefix: 'defaultThreadPoolExecutor'
